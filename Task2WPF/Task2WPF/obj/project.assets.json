@@ -2098,11 +2098,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
+      "projectUniqueName": "E:\\Software\\B1 Tasks\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
       "projectName": "Task2WPF",
-      "projectPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
+      "projectPath": "E:\\Software\\B1 Tasks\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
       "packagesPath": "C:\\Users\\Stravy Vox\\.nuget\\packages\\",
-      "outputPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\obj\\",
+      "outputPath": "E:\\Software\\B1 Tasks\\Task2WPF\\Task2WPF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Stravy Vox\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2119,8 +2119,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj": {
-              "projectPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj"
+            "E:\\Software\\B1 Tasks\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj": {
+              "projectPath": "E:\\Software\\B1 Tasks\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj"
             }
           }
         }

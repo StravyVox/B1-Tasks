@@ -20,10 +20,13 @@ namespace Task1
         private string _datatable;
         public event EventHandler<int> AmountOfCopiedInfo;
         public event EventHandler<string> AvgMedianSQlResult;
-        public SQLOperator(string connectionString, string tableName)
+        public SQLOperator(string tableName)
+        {
+            _datatable = tableName;
+        }
+        public void SetConnectionString(string connectionString)
         {
             _connectionString = connectionString;
-            _datatable = tableName;
         }
         //Create DataTable to work with sql
         private DataTable CreateTable()
@@ -56,8 +59,9 @@ namespace Task1
                     List<DataRow> rows = new List<DataRow>();
                     while (TotalAmount > 0)
                     {    
-                        GetSQLFormattedStringsFromFile(table,completedAmount, 500000, out rows, strings);
+                        rows = GetSQLFormattedStringsFromFile(table,completedAmount, 500000, rows, strings);
                         copier.WriteToServer(rows.ToArray());
+                       
                         completedAmount += rows.Count;
                         AmountOfCopiedInfo.Invoke(this, completedAmount);
                     }
@@ -71,27 +75,39 @@ namespace Task1
             }
         }
         //Get amount of strings from file starts with startCount
-        private void GetSQLFormattedStringsFromFile(DataTable table, int startCount, int AmountOfStrings, out List<DataRow> result, string[] allFileStrings)
+        private List<DataRow> GetSQLFormattedStringsFromFile(DataTable table, int startCount, int AmountOfStrings, List<DataRow> result, string[] allFileStrings)
         {
-            foreach(DataRow row in table.Rows)
-            {
-                row.Delete();
-            } 
-            result = new List<DataRow>();
            
             var strings = allFileStrings.Skip(startCount).Take(AmountOfStrings);
-           
+            int index = 0;
             foreach(string rowString in strings)
             {
                 string[] newRowStrings = rowString.Split("||");
-                DataRow row = table.NewRow();
-                row["DateInfo"] = newRowStrings[0];
-                row["RandomLatin"] = newRowStrings[1];
-                row["RandomRu"] = newRowStrings[2];
-                row["RandomInt"] = newRowStrings[3];
-                row["RandomFloat"] = newRowStrings[4];
-                result.Add(row);
+                if (table.Rows.Count < 1)
+                {
+                    DataRow row = table.NewRow();
+                    row["DateInfo"] = newRowStrings[0];
+                    row["RandomLatin"] = newRowStrings[1];
+                    row["RandomRu"] = newRowStrings[2];
+                    row["RandomInt"] = newRowStrings[3];
+                    row["RandomFloat"] = newRowStrings[4];
+                    result.Add(row);
+                }
+                else
+                {
+                    result[index]["DateInfo"] = newRowStrings[0];
+                    result[index]["RandomLatin"] = newRowStrings[1];
+                    result[index]["RandomRu"] = newRowStrings[2];
+                    result[index]["RandomInt"] = newRowStrings[3];
+                    result[index]["RandomFloat"] = newRowStrings[4];
+                }
+                index++;
             }
+            if(result.Count > index)
+            {
+                return result.Take(index).ToList();
+            }
+            return result;
         }
         /// <summary>
         /// Calls a sql query and return the result as an event message
@@ -104,7 +120,8 @@ namespace Task1
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(sqlString, connection);
-                SqlDataReader reader = await command.ExecuteReaderAsync();
+
+                SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();

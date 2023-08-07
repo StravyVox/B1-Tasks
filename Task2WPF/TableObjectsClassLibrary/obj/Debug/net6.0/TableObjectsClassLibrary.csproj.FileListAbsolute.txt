@@ -10,3 +10,15 @@ E:\Software\Repos\learnWPF\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\Ta
 E:\Software\Repos\learnWPF\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\refint\TableObjectsClassLibrary.dll
 E:\Software\Repos\learnWPF\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.pdb
 E:\Software\Repos\learnWPF\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\ref\TableObjectsClassLibrary.dll
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\bin\Debug\net6.0\TableObjectsClassLibrary.deps.json
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\bin\Debug\net6.0\TableObjectsClassLibrary.dll
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\bin\Debug\net6.0\TableObjectsClassLibrary.pdb
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.csproj.AssemblyReference.cache
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.AssemblyInfoInputs.cache
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.AssemblyInfo.cs
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.csproj.CoreCompileInputs.cache
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.dll
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\refint\TableObjectsClassLibrary.dll
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\TableObjectsClassLibrary.pdb
+E:\Software\B1 Tasks\Task2WPF\TableObjectsClassLibrary\obj\Debug\net6.0\ref\TableObjectsClassLibrary.dll

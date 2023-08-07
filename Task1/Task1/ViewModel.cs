@@ -13,12 +13,15 @@ namespace Task1
     internal class ViewModel:INotifyPropertyChanged
     {
 
+
         public event PropertyChangedEventHandler? PropertyChanged;
         public ModelViewCommand GenerateCommand { get; set; }
         public ModelViewCommand ConvertCommand { get; set; }
         public ModelViewCommand SQLCopyCommand { get; set; }
         public ModelViewCommand SQLAvgAndMedianCommand { get; set; }
-
+        public ModelViewCommand SetSQLCommand { get; set; }
+        public bool SqlCommandSet { get => sqlCommandSet; set { sqlCommandSet = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SqlCommandSet")); } }
+        public string SqlString { get => sqlString; set { sqlString = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SqlString")); } }
         public string ResultString {
             get => _resultstring;
             set { _resultstring = value;
@@ -46,9 +49,14 @@ namespace Task1
 
         private Model _model;
         private string _resultstring;
+        private string sqlString;
+        private bool sqlCommandSet;
+
         public ViewModel()
         {
             _model = new Model();
+            SqlString = @"Data Source=DESKTOP-2LF5IPN;Initial Catalog=Task1DB;Integrated Security=True;TrustServerCertificate=True";
+            SqlCommandSet = false;
 
             _model.FileGenerated += (sender, result) =>
             {
@@ -70,7 +78,11 @@ namespace Task1
             {
                 ResultString = result;
             };
-
+            SetSQLCommand = new ModelViewCommand(() =>
+            {
+                ResultString = _model.SetConnectionString(SqlString);
+                SqlCommandSet = true;
+            });
             GenerateCommand = new ModelViewCommand(() =>
             {
                 Task.Run(()=>_model.GenerateFiles());
@@ -83,11 +95,12 @@ namespace Task1
             });
             SQLCopyCommand = new ModelViewCommand(() =>
             {
-                Task.Run(() => _model.CopyToSQLDatabase());
+                Task.Run(() => _model.CopyToSQLDatabase()).ContinueWith(task => { _model = null; _model = new Model(); _model.SetConnectionString(SqlString); });
                 ResultString = "Copying to SQL";
             });
             SQLAvgAndMedianCommand = new ModelViewCommand(() =>
             {
+                 ResultString = "SQL Command was send. Waiting...";
                 Task.Run(() => {
                     ResultString = "SQL Command was send. Waiting...";
                     _model.SqlAvgAndMedian();

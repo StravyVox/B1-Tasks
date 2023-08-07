@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I12N+ZOG3aViYDsgL5EXLAXvYEm3ZC5kcwtcQlC0kusi8t7oZLs4uJkvbCs1GDeazaTPAbR/aSeVe0rZ5vRRig==",
+  "dgSpecHash": "uu+p+9JB1ZfcfQtYxpgB7H35BfIYMGYWE3GZPAwafc4XptVqQvHpPc3uba8Uv3LwVpKvNLlXQ3qN1YK495Vi7g==",
   "success": true,
-  "projectFilePath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
+  "projectFilePath": "E:\\Software\\B1 Tasks\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stravy Vox\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Stravy Vox\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -2008,11 +2008,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Software\\Repos\\learnWPF\\Task1\\Task1\\Task1.csproj",
+      "projectUniqueName": "E:\\Software\\B1 Tasks\\Task1\\Task1\\Task1.csproj",
       "projectName": "Task1",
-      "projectPath": "E:\\Software\\Repos\\learnWPF\\Task1\\Task1\\Task1.csproj",
+      "projectPath": "E:\\Software\\B1 Tasks\\Task1\\Task1\\Task1.csproj",
       "packagesPath": "C:\\Users\\Stravy Vox\\.nuget\\packages\\",
-      "outputPath": "E:\\Software\\Repos\\learnWPF\\Task1\\Task1\\obj\\",
+      "outputPath": "E:\\Software\\B1 Tasks\\Task1\\Task1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Stravy Vox\\AppData\\Roaming\\NuGet\\NuGet.Config",
