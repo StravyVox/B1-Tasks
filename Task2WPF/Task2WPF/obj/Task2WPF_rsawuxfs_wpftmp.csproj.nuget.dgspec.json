@@ -1,0 +1,139 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\Task2WPF.csproj": {}
+  },
+  "projects": {
+    "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj",
+        "projectName": "TableObjectsClassLibrary",
+        "projectPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj",
+        "packagesPath": "C:\\Users\\Stravy Vox\\.nuget\\packages\\",
+        "outputPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Stravy Vox\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\Task2WPF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
+        "projectName": "Task2WPF",
+        "projectPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\Task2WPF.csproj",
+        "packagesPath": "C:\\Users\\Stravy Vox\\.nuget\\packages\\",
+        "outputPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\Task2WPF\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Stravy Vox\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj": {
+                "projectPath": "E:\\Software\\Repos\\learnWPF\\Task2WPF\\TableObjectsClassLibrary\\TableObjectsClassLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "ExcelDataReader": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "ExcelDataReader.DataSet": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
